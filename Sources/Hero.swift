@@ -136,7 +136,7 @@ internal extension Hero {
     }
 
     // take a snapshot to hide all the flashing that might happen
-    fullScreenSnapshot = transitionContainer.window?.snapshotView(afterScreenUpdates: true) ?? fromView.snapshotView(afterScreenUpdates: true)
+    fullScreenSnapshot = transitionContainer.window?.snapshotView(afterScreenUpdates: false) ?? fromView.snapshotView(afterScreenUpdates: false)
     (transitionContainer.window ?? transitionContainer)?.addSubview(fullScreenSnapshot)
 
     if let oldSnapshot = fromViewController?.heroStoredSnapshot {
